@@ -1,11 +1,14 @@
 <template>
-  <div class="QuestionComponent">
+  <div class="QuestionComponent col-4">
     <div class="card text-center">
-      <div class="card-header">Featured</div>
+      <div class="card-header">{{questionProp.Time}} Seconds</div>
       <div class="card-body">
-        <h5 class="card-title">Special title treatment</h5>
-        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-        <a href="#" class="btn btn-primary">Go somewhere</a>
+        <h5 class="card-title">{{questionProp.Points}} Points</h5>
+        <p class="card-text">{{questionProp.Description}}</p>
+        <button class="btn btn-primary">Option1</button>
+        <button class="btn btn-secondary">Option2</button>
+        <button class="btn btn-info">Option3</button>
+        <button class="btn btn-success">Option4</button>
       </div>
       <div class="card-footer text-muted">2 days ago</div>
     </div>
@@ -21,7 +24,8 @@ export default {
   },
   computed: {},
   methods: {},
-  components: {}
+  components: {},
+  props: ["questionProp"]
 };
 </script>
 
